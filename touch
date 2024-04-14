@@ -1,0 +1,28 @@
+#Touch command usage
+1. Create a file using touch comamnd
+tocuh file_name
+
+2. Create multiple file
+touch file1 file2 file4 ...
+
+3. Change access time of a file to current time
+touch -a filename
+
+4. Chance access time of a file to specific time
+touch -a -t[CC]YYMMDDhhmm.[ss] filename 
+example setting a file access time to 01 dec 2022
+touch -t -a 202212010710.10 filename
+Earlier - -rw-r--r-- 1 ravi.sharma34 1049089 0 Apr 14 06:33 file
+Now - -rw-r--r-- 1 ravi.sharma34 1049089 0 Dec  1  2022 file
+
+5. Change modification time of a file to current time
+touch -m file
+
+6. Change modification time to a specific date
+touch -t -m [CC]YYMMDDhhmm.ss filename
+example setting a file access time to 01 dec 2025
+touch -t 202512010710.10 file1
+Earlier - -rw-r--r-- 1 ravi.sharma34 1049089 0 Apr 14 06:37 file1
+now - -rw-r--r-- 1 ravi.sharma34 1049089 0 Dec  1  2025 file1
+
+To chnage only access time use flag -t -a and for modification use flag -t -m and for changing both time use simple -t option.
